@@ -1,0 +1,222 @@
+[
+  {
+    "id": "missing_direct_001",
+    "category": "direct",
+    "prompt": "Check which columns have missing values.",
+    "expected_tool": "check_missing",
+    "expected_arguments": {}
+  },
+  {
+    "id": "duplicates_direct_001",
+    "category": "direct",
+    "prompt": "Check whether the dataset contains duplicate rows.",
+    "expected_tool": "check_duplicates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "cardinality_direct_001",
+    "category": "direct",
+    "prompt": "Report the number and proportion of unique values in each column.",
+    "expected_tool": "check_cardinality",
+    "expected_arguments": {}
+  },
+  {
+    "id": "constant_direct_001",
+    "category": "direct",
+    "prompt": "Find columns whose observed values are all the same.",
+    "expected_tool": "check_constant_columns",
+    "expected_arguments": {}
+  },
+  {
+    "id": "id_candidates_direct_001",
+    "category": "direct",
+    "prompt": "Identify columns that may be record identifiers.",
+    "expected_tool": "detect_id_candidates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "numeric_direct_001",
+    "category": "direct",
+    "prompt": "Give descriptive statistics for the numeric columns.",
+    "expected_tool": "describe_numeric",
+    "expected_arguments": {}
+  },
+  {
+    "id": "categorical_direct_001",
+    "category": "direct",
+    "prompt": "Summarize the most frequent values in the categorical columns.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {}
+  },
+  {
+    "id": "missing_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "Where is information absent in this dataset?",
+    "expected_tool": "check_missing",
+    "expected_arguments": {}
+  },
+  {
+    "id": "duplicates_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "Are any records repeated?",
+    "expected_tool": "check_duplicates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "cardinality_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "How much variety is there in each field?",
+    "expected_tool": "check_cardinality",
+    "expected_arguments": {}
+  },
+  {
+    "id": "constant_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "Which fields contain only one observed value?",
+    "expected_tool": "check_constant_columns",
+    "expected_arguments": {}
+  },
+  {
+    "id": "id_candidates_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "Which columns look like unique record keys?",
+    "expected_tool": "detect_id_candidates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "numeric_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "What do the numbers in this table look like statistically?",
+    "expected_tool": "describe_numeric",
+    "expected_arguments": {}
+  },
+  {
+    "id": "categorical_paraphrase_001",
+    "category": "paraphrase",
+    "prompt": "Which labels occur most often in the text-like fields?",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {}
+  },
+  {
+    "id": "categorical_argument_001",
+    "category": "argument_sensitive",
+    "prompt": "Show the single most common value in each categorical column.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {
+      "top_k": 1
+    }
+  },
+  {
+    "id": "categorical_argument_002",
+    "category": "argument_sensitive",
+    "prompt": "List the top 2 values for every categorical column.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {
+      "top_k": 2
+    }
+  },
+  {
+    "id": "categorical_argument_003",
+    "category": "argument_sensitive",
+    "prompt": "Show me the 3 most frequent values for categorical columns.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {
+      "top_k": 3
+    }
+  },
+  {
+    "id": "categorical_argument_004",
+    "category": "argument_sensitive",
+    "prompt": "Summarize the top 5 categories in each categorical column.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {
+      "top_k": 5
+    }
+  },
+  {
+    "id": "categorical_argument_005",
+    "category": "argument_sensitive",
+    "prompt": "List the 10 most common categories for each categorical field.",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {
+      "top_k": 10
+    }
+  },
+  {
+    "id": "categorical_argument_006",
+    "category": "argument_sensitive",
+    "prompt": "What categories appear most often?",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {}
+  },
+  {
+    "id": "missing_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "Point out the fields with gaps in their observations.",
+    "expected_tool": "check_missing",
+    "expected_arguments": {}
+  },
+  {
+    "id": "duplicates_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "Do any rows appear more than once?",
+    "expected_tool": "check_duplicates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "cardinality_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "How diverse are the values in each field?",
+    "expected_tool": "check_cardinality",
+    "expected_arguments": {}
+  },
+  {
+    "id": "constant_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "Do any fields contain just one value all the way through?",
+    "expected_tool": "check_constant_columns",
+    "expected_arguments": {}
+  },
+  {
+    "id": "id_candidates_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "Which columns look like unique record identifiers?",
+    "expected_tool": "detect_id_candidates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "numeric_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "Give me a statistical overview of the number columns.",
+    "expected_tool": "describe_numeric",
+    "expected_arguments": {}
+  },
+  {
+    "id": "categorical_ambiguous_001",
+    "category": "ambiguous_resolvable",
+    "prompt": "What categories show up most often?",
+    "expected_tool": "describe_categorical",
+    "expected_arguments": {}
+  },
+  {
+    "id": "missing_ambiguous_002",
+    "category": "ambiguous_resolvable",
+    "prompt": "Which parts of the table have blank entries?",
+    "expected_tool": "check_missing",
+    "expected_arguments": {}
+  },
+  {
+    "id": "duplicates_ambiguous_002",
+    "category": "ambiguous_resolvable",
+    "prompt": "Are there repeated observations in the table?",
+    "expected_tool": "check_duplicates",
+    "expected_arguments": {}
+  },
+  {
+    "id": "cardinality_ambiguous_002",
+    "category": "ambiguous_resolvable",
+    "prompt": "Which fields have a wide mix of distinct entries?",
+    "expected_tool": "check_cardinality",
+    "expected_arguments": {}
+  }
+]
